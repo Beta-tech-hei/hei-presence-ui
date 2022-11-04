@@ -9,8 +9,9 @@ import {
   ModalHeader,
   ModalOverlay, Select, useDisclosure
 } from "@chakra-ui/react";
+import { Datapicker } from "../../../../common/components/DatePicker";
 
-export const OrderItem = () => {
+export const Addevent = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const initialRef = React.useRef(null)
@@ -18,7 +19,11 @@ export const OrderItem = () => {
 
   return (
     <>
-      <Button onClick={onOpen} colorScheme='teal' variant='outline' >Passer le commande</Button>
+      <Button onClick={onOpen}  bg={'blue.400'}
+                                color={'white'}
+                                _hover={{
+                                    bg: 'blue.500',
+                                }}>Ajout d' évènement</Button>
       <Modal
         initialFocusRef={initialRef}
         finalFocusRef={finalRef}
@@ -27,34 +32,27 @@ export const OrderItem = () => {
       >
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Passer votre commande</ModalHeader>
+          <ModalHeader>Ajouter l' évènement</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6}>
             <FormControl>
-              <FormLabel>Nom du client</FormLabel>
-              <Input ref={initialRef} placeholder='Votre nom....' />
+              <FormLabel>Nom de l'évènement</FormLabel>
+              <Input ref={initialRef} placeholder='Le nom....' />
             </FormControl>
 
             <FormControl mt={4}>
-              <FormLabel>Adresse</FormLabel>
-              <Input placeholder='Adresse' />
+              <FormLabel>Description</FormLabel>
+              <Input placeholder='Description...' />
             </FormControl>
             <FormControl mt={4}>
-              <FormLabel>Plat à commander</FormLabel>
-              <Select placeholder=''>
-                <option value='option1'>Kopozé</option>
-                <option value='option2'>Riz cantonnais</option>
-                <option value='option3'>Chocolat chaud</option>
-              </Select>
+              <FormLabel>Lieu</FormLabel>
+              <Input placeholder='Lieu' />
             </FormControl>
             <FormControl mt={4}>
-              <FormLabel>Téléphone </FormLabel>
-              <Input placeholder='+261 34 20 258 45' type={'number'} />
+              <FormLabel>Date de l'évènement</FormLabel>
+              <Datapicker/>
             </FormControl>
-            <FormControl mt={4}>
-              <FormLabel>Quantité</FormLabel>
-              <Input type={'number'} />
-            </FormControl>
+            
           </ModalBody>
           <ModalFooter>
             <Button colorScheme='blue' mr={3}>
