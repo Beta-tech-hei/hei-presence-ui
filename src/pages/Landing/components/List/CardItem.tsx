@@ -1,6 +1,6 @@
 import { Center, useColorModeValue, Stack, Heading, Box, Image, Text } from '@chakra-ui/react';
 import React from 'react';
-import { OrderItem } from './OrderItem';
+
 
 const STATIC_IMAGE = 'https://th.bing.com/th/id/R.d1408c82b62294f0ab44ed2b4cc172f7?rik=jBirlT4ETc3MLA&pid=ImgRaw&r=0';
 
@@ -60,7 +60,7 @@ export const CardItem = () => (
           <Text fontWeight={500} fontSize={'lg'}>
             Ar 5000
           </Text>
-          <OrderItem />
+          
         </Stack>
       </Stack>
     </Box>

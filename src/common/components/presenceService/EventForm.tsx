@@ -32,7 +32,7 @@ export const EventForm = (props:EventItem)=> {
 
             {!isError ? (
                 <FormHelperText>
-                    Votre {props.label} est correcte
+                    Votre {props.label} doit être précise
                 </FormHelperText>
             ) : (
                 <FormErrorMessage>{props.label} est obligatoire.</FormErrorMessage>

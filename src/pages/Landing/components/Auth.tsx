@@ -50,7 +50,7 @@ export const Authentication = ()=> {
              Présence Faciale des étudiants
             </Heading>
             <FormControl id="email" isRequired>
-              <FormLabel>Email address</FormLabel>
+              <FormLabel>Adresse email</FormLabel>
               <Input
                   placeholder="hei.teacher@example.com"
                   _placeholder={{ color: 'gray.500' }}
@@ -58,7 +58,7 @@ export const Authentication = ()=> {
               />
             </FormControl>
             <FormControl id="password" isRequired>
-              <FormLabel>Password</FormLabel>
+              <FormLabel>Mot de Passe</FormLabel>
               <Input type="password" />
             </FormControl>
             <Stack spacing={6}>
@@ -77,7 +77,7 @@ export const Authentication = ()=> {
                   isClosable: true,
                 })
               }}>
-                Submit
+                Se connecter
               </Button>
             </Stack>
           </Stack>
