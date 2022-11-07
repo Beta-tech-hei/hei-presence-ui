@@ -58,7 +58,6 @@ export const TakePhoto = () => {
                                                 videoConstraints={videoConstraints}
                                             />
                                         ) : null
-
                                 }
 
                             </div>
