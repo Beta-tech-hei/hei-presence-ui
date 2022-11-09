@@ -65,12 +65,19 @@ export default function Navbar() {
                                 bg={'blue.400'}
                                 color={'white'}
                                 _hover={{
-                                    bg: 'blue.500',
-                                }} onClick={() => {
-                                    handleOnClick();
+                                bg: 'blue.500',
+                                    }} onClick={()=> {
+                                        handleOnClick();
+                                toast({
+                                title: 'Session terminée',
+                                description: "A bientôt",
+                                status: 'success',
+                                duration: 9000,
+                                isClosable: true,
+                                    })
                                 }}>
-                                Déconnexion
-                            </Button>
+                                    Déconnexion
+                                </Button>
                         </Stack>
                     </Flex>
                 </Flex>
