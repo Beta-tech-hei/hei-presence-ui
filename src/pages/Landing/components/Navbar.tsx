@@ -71,7 +71,7 @@ export default function Navbar() {
                                 toast({
                                 title: 'Session terminée',
                                 description: "A bientôt",
-                                status: 'success',
+                                status: 'loading',
                                 duration: 9000,
                                 isClosable: true,
                                     })
