@@ -1,9 +1,10 @@
 import React, { useRef, useState, useCallback } from "react";
 import Webcam from "react-webcam";
 import Navbar from "../../pages/Landing/components/Navbar";
-import { Button, Center } from "@chakra-ui/react";
+import { Button, Center, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import './assets/card.css';
+import { useSafeTimeout } from "@primer/react";
 
 const videoConstraints = {
     width: 720,
@@ -24,6 +25,15 @@ export const TakePhoto = () => {
             setPhoto(false)
         }
     }, [webcamRef]);
+
+    const { safeSetTimeout, safeClearTimeout } = useSafeTimeout();
+    let timeoutId = null
+
+    const handleOnClick = () => {
+        timeoutId = safeSetTimeout(() => navigate("/landing"), 3000)
+    }
+    const toast = useToast();
+
 
     return (
         <>
@@ -99,9 +109,20 @@ export const TakePhoto = () => {
                             </Button>
                             <Button
                                 className="btn"
-                                onClick={() => navigate('/landing')}
-                            >Terminer
-                            </Button>
+                                _hover={{
+                             
+                                    }} onClick={()=> {
+                                        handleOnClick();
+                                toast({
+                                title: 'Fin du présence faciale',
+                                description: "La liste des étudiants mise à jour",
+                                status: 'loading',
+                                duration: 3000,
+                                isClosable: true,
+                                    })
+                                }}>
+                                    Déconnexion
+                                </Button>
                         </div>
 
                     </Center>
