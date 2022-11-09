@@ -115,7 +115,7 @@ export const TakePhoto = () => {
                                         handleOnClick();
                                 toast({
                                 title: 'Fin du présence faciale',
-                                description: "Votre liste a été mis à jour",
+                                description: "La liste des étudiants mise à jour",
                                 status: 'loading',
                                 duration: 3000,
                                 isClosable: true,
