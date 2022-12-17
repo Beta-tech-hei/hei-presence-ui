@@ -49,7 +49,7 @@ export const TakePhoto = () => {
                 <div className="photo">
                     {isCaptureEnable || (
 
-                        <Button onClick={() => setCaptureEnable(true)} colorScheme={"red"} w={"max-content"} h={"12"} rounded={"2xl"} display={"flex"} flexWrap={"wrap"}>Vérifié ma présence</Button>
+                        <Button onClick={() => setCaptureEnable(true)} colorScheme={"red"} w={"max-content"} h={"12"} rounded={"2xl"} display={"flex"} flexWrap={"wrap"}>Vérifie ma présence</Button>
 
                     )}
                     {isCaptureEnable && (
